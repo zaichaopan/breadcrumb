@@ -1,6 +1,6 @@
 <?php
 
-class BreadcrumbBladeTest extends TestCase
+class NavBladeTest extends TestCase
 {
     public function setUp()
     {
