@@ -29,6 +29,9 @@ class Link
     public function model(): ?Model
     {
         return collect($this->getRouteParameters())->first(function ($value, $key) {
+            if (is_string($value)) {
+                return false;
+            }
             $routeKey = $value->getRouteKeyName();
             return  $value->{$routeKey} === $this->segment;
         });
