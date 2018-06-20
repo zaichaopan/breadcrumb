@@ -1,6 +1,6 @@
 {
-    "name": "zaichaopan/dynamic-breadcrumbs",
-    "description": "A package to add dynamic breadcrumbs to your laravel app",
+    "name": "zaichaopan/breadcrumb",
+    "description": "A package to add dynamic breadcrumb to your laravel app",
     "type": "library",
     "license": "MIT",
     "authors": [

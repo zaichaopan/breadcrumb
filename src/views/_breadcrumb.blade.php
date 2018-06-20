@@ -4,7 +4,7 @@
             <a href="/">home</a>
         </li>
 
-        @foreach(request()->breadcrumbs()->links() as $link)
+        @foreach(request()->breadcrumb()->links() as $link)
         <li class="breadcrumb-item">
             <a href="{{$link->url()}}">{{ $link->linkText() }}</a>
         </li>

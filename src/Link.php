@@ -7,17 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Link
 {
+    /**
+     *
+     * @var Illuminate\Http\Request
+     */
     protected $request;
 
+    /**
+     *
+     * @var string
+     */
     protected $segment;
 
-    public function setRequest(Request $request)
+    public function __construct(Request $request, string $segment)
     {
         $this->request = $request;
-    }
-
-    public function setSegment(string $segment)
-    {
         $this->segment = $segment;
     }
 

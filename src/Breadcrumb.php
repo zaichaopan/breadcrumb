@@ -16,10 +16,7 @@ class Breadcrumb
     public function links()
     {
         return collect($this->request->segments())->map(function ($segment) {
-            $link = app()->make(Link::class);
-            $link->setSegment($segment);
-            $link->setRequest($this->request);
-            return $link;
+            return new Link($this->request, $segment);
         })->toArray();
     }
 }

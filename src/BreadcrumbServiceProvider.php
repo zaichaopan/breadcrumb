@@ -9,7 +9,7 @@ class BreadcrumbServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        Request::macro('breadcrumbs', function () {
+        Request::macro('breadcrumb', function () {
             return new Breadcrumb($this);
         });
     }
