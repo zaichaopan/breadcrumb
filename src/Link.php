@@ -3,6 +3,7 @@
 namespace Zaichaopan\Breadcrumb;
 
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
 
 class Link
 {
@@ -25,7 +26,7 @@ class Link
         return title_case($this->segment);
     }
 
-    public function model()
+    public function model(): ?Model
     {
         return collect($this->getRouteParameters())->first(function ($value, $key) {
             $routeKey = $value->getRouteKeyName();
@@ -33,12 +34,12 @@ class Link
         });
     }
 
-    public function getRouteParameters()
+    public function getRouteParameters(): ?array
     {
         return $this->request->route()->parameters;
     }
 
-    public function linkText()
+    public function linkText(): string
     {
         return title_case(optional($this->model())->linkText() ?? $this->name());
     }
