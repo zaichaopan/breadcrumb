@@ -19,10 +19,10 @@ class LinkTest extends TestCase
     {
         $links = $this->request->breadcrumb()->links();
 
-        $this->assertEquals(title_case('categories'), $links[0]->name());
-        $this->assertEquals(title_case('meat'), $links[1]->name());
-        $this->assertEquals(title_case('products'), $links[2]->name());
-        $this->assertEquals(title_case('beef'), $links[3]->name());
+        $this->assertEquals('categories', $links[0]->name());
+        $this->assertEquals('meat', $links[1]->name());
+        $this->assertEquals('products', $links[2]->name());
+        $this->assertEquals('beef', $links[3]->name());
     }
 
     /** @test */

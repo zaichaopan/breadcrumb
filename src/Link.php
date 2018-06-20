@@ -27,7 +27,7 @@ class Link
 
     public function name(): string
     {
-        return title_case($this->segment);
+        return $this->segment;
     }
 
     public function model(): ?Model
@@ -36,6 +36,7 @@ class Link
             if (is_string($value)) {
                 return false;
             }
+
             $routeKey = $value->getRouteKeyName();
             return  $value->{$routeKey} === $this->segment;
         });
