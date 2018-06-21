@@ -38,6 +38,11 @@ class Link
             }
 
             $routeKey = $value->getRouteKeyName();
+
+            if ($routeKey === 'id') {
+                return (int) $value->{$routeKey} === (int) $this->segment;
+            }
+
             return  $value->{$routeKey} === $this->segment;
         });
     }

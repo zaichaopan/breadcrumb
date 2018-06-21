@@ -64,12 +64,21 @@ class Product extends Model implements BreadcrumbLinkInterface
 
 * Include breadcrumb nav link in the view
 
-This package provides a default bootstrap4-style breadcrumb nav partial view. To include in your __products.show__ view:
+This package provides a default bootstrap4-style breadcrumb nav partial view.
+
+
+To include in your __products.show__ view:
 
 ```html
-@include('breadcrumb:_nav')
+@include('breadcrumb::_nav')
 ```
 
 If you want to customize the breadcrumb nav. You can publish the view.
+
+```bash
+php artisan vendor:publish
+```
+
+Then choose the provider: __Zaichaopan\Breadcrumb\BreadcrumbServiceProvider__
 
 That is all you need to do to use this package.
