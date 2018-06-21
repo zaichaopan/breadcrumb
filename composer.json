@@ -39,7 +39,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Zaichaopan\\breadcrumb\\BreadcrumbServiceProvider"
+                "Zaichaopan\\Breadcrumb\\BreadcrumbServiceProvider"
             ]
         }
     }
