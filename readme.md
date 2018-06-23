@@ -1,6 +1,6 @@
 # Breadcrumb
 
-This package allows you to add dynamic breadcrumb to your laravel app. It can be used in laravel 5.5 or higher.
+This package allows you to add dynamic breadcrumb to your laravel app. It is inspired by [code course](#https://codecourse.com/watch/dynamic-breadcrumbs-in-laravel?part). It can be used in laravel 5.5 or higher.
 
 ## Installation
 
